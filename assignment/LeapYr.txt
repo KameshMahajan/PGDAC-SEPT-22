@@ -1,0 +1,24 @@
+/******************************************************************************
+ Write a Java Program to find whether given number is Leap year or NOT
+
+*******************************************************************************/
+import java.util.*;
+public class LeapYr
+{
+	public static void main(String[] args) {
+	    
+	     
+	     System.out.print("enter yr...");
+	     Scanner sc = new Scanner(System.in);
+	     int year = sc.nextInt();
+	                                                                 //non century year % 4==0 && year % 100 !=0
+	     if(year % 4==0 && year % 100 !=0 || year % 400 ==0 ){       //century sathi 400 divide
+	          System.out.println("given year is leap year");
+	     }
+	     
+	     else{
+	          System.out.println("given year is NOT leap year");
+	     }
+	     
+	}
+}

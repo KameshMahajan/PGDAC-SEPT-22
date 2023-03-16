@@ -1,0 +1,45 @@
+/******************************************************************************
+ Write a java program to LCM of TWO given numberusing Prime Factors method. 
+
+*******************************************************************************/
+
+public class LCMByPrimeFactors
+{
+	 public static int largerNum(int n1, int n2) {
+        if (n1 > n2) {
+            return n1;
+        } else {
+            return n2;
+        }
+    }
+  
+    public static int getLcm(int n1, int n2, int lcm) {
+        if (n1 == 1 && n2 == 1) {
+            return lcm;
+        }
+        int ans = 1;
+        
+        for (int i = 2; i <= largerNum(n1, n2); i++) {
+            if (n1 % i == 0 || n2 % i == 0) {
+                if (n1 % i == 0) {
+                    n1 = n1 / i;
+                }
+                if (n2 % i == 0) {
+                    n2 = n2 / i;
+                }
+               
+                ans = getLcm(n1, n2, lcm * i);
+                break;
+            }
+        }
+        return ans;
+    }
+
+    public static void main(String[] args) {
+        int n1 = 15;
+        int n2 = 12;
+        int lcm = getLcm(n1, n2, 1); 
+        System.out.println("The LCM of two number is "+ lcm);
+}
+
+}

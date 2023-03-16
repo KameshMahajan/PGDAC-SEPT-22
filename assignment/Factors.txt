@@ -1,0 +1,22 @@
+/******************************************************************************
+
+Write a Java Program to print all the Factors of the Given number
+		
+*******************************************************************************/
+import java.util.*;
+
+public class Factors
+{
+	public static void main(String[] args) {
+		
+		int no = new Scanner(System.in).nextInt();
+		int arr[] = new int[no];
+		for(int i=1;i<no;i++){
+		     if(no%i == 0 ){
+		          System.out.println("factors are "+i);
+		     }
+		}
+	
+		
+	}
+}

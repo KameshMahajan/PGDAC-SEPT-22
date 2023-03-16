@@ -1,0 +1,40 @@
+/******************************************************************************
+
+     Write a Java Program to find GCD of two given numbers. 
+     Write a java program to LCM of TWO given number. 
+
+*******************************************************************************/
+public class LCMGCM
+{
+         void findGCD(int n1, int n2 ){
+       int gcd = 0;
+
+     for (int i = 1; i <= n1 && i <= n2; ++i) {
+
+      // check if i perfectly divides both n1 and n2
+      if (n1 % i == 0 && n2 % i == 0)
+        gcd = i;
+       }
+       System.out.println("The GCD of " + n1 +" and " + n2 + " is " + gcd);
+       }
+     
+         void findLCM(int n1, int n2 ){
+          int lcm = (n1 > n2) ? n1 : n2;
+
+         // Always true
+         while(true) {
+           if( lcm % n1 == 0 && lcm % n2 == 0 ) {
+             System.out.println("The LCM of "+n1+" and "+ n2+" is "+ lcm);
+             break;
+           }
+           ++lcm;
+          }
+     }
+	public static void main(String[] args) {
+     Main m = new Main();
+
+     m.findGCD(20,30);
+     m.findLCM(20,30);
+	}
+}
+

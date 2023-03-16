@@ -1,0 +1,60 @@
+/******************************************************************************
+
+Write a Java Program to print all the Prime Factors of the Given Number.
+
+*******************************************************************************/
+import java.util.*;
+public class PrimeFactor
+{
+	public static void main(String[] args) {
+		
+	    Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter a positive integer: ");
+        int num = input.nextInt();
+
+        System.out.print("Prime factors of " + num + " are: ");
+
+        for (int i = 2; i <= num; i++) {
+            while (num % i == 0) {
+                System.out.print(i + " ");
+                num /= i;
+            }
+        }
+        //------------------------------------------
+        /* Scanner sc = new Scanner(System.in);
+        
+            int n = sc.nextInt();
+
+    
+    if (n <= 1 || n >= 1000) {
+        System.out.println("\"INVALID INPUT\"");
+    } 
+	else 
+	{
+        int count = 0; // count of prime numbers
+        int num = 2; // starting number to check for prime
+
+        while (count < n + 1) {
+            boolean isPrime = true;
+            for (int i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                count++;
+                if (count == n - 1) {
+                    System.out.print(num + " ");
+                } else if (count == n) {
+                    System.out.print(num + " ");
+                } else if (count == n + 1) {
+                    System.out.print(num);
+                    break;
+                }
+            }
+            num++;
+*/
+	}
+}

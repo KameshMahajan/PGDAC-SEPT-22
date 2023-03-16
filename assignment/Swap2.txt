@@ -1,0 +1,19 @@
+import java.util.*;
+public class Swap2
+{
+	public static void main(String[] args) {
+	/*Swap two numberswithout using third variable approach 1. */
+		Scanner sc = new Scanner(System.in);
+		System.out.println ("enter n1");
+		int n1 = sc.nextInt();
+		System.out.println ("enter n2");
+		int n2 = sc.nextInt();
+	     
+	      n1 = n1 * n2; // 10+20
+	      n2 = n1 / n2; // 30-10 
+		 n1 = n1 / n2; // 30-20 
+		 
+		 System.out.println ("n1---- "+ n1);
+		 System.out.println ("n2---- "+ n2);
+	}
+}

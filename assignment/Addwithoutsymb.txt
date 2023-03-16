@@ -1,0 +1,24 @@
+/******************************************************************************
+
+Welcome to GDB Online.
+GDB online is an online compiler and debugger tool for C, C++, Python, Java, PHP, Ruby, Perl,
+C#, OCaml, VB, Swift, Pascal, Fortran, Haskell, Objective-C, Assembly, HTML, CSS, JS, SQLite, Prolog.
+Code, Compile, Run and Debug online from anywhere in world.
+
+*******************************************************************************/
+public class Addwithoutsymb
+{
+     public static int addwithout(int a, int b){
+          for(int i=0; i<b; i++){
+                a++;
+          }return a;
+     }
+	public static void main(String[] args) {
+		System.out.println("How to add two numbers without using the arithmetic operators in Java? ");
+		
+		int x = 1;
+		int y = 1;
+		System.out.println(addwithout(x,y));
+		
+	}
+}

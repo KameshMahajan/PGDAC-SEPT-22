@@ -1,0 +1,43 @@
+/******************************************************************************
+
+Write a java program to print all the permutation of entered string.
+e.g. if entered string is “RAM” then the output be like
+RMA
+ARM
+AMR
+MAR
+MRA
+
+*******************************************************************************/
+
+public class StringPermutation
+{
+     public static void stringPermutation( String input) {
+        
+               System.out.println("permutation of string  : " +input);
+               stringPermutation( "", input );
+                }
+
+    
+    
+     public static void stringPermutation(String permutation, String input) {
+          if(input.length()==0){
+               System.out.println("string length is 0 : " +permutation);
+          }
+           else{
+                for(int i=0; i<input.length();i++){
+                     stringPermutation( permutation+input.charAt(i),  input.substring(0,i) + input.substring(i+1, input.length()));     //r, a
+                }
+           }
+    }    
+     
+	public static void main(String[] args) {
+	String s="ram";
+	
+	stringPermutation(s);
+	     
+	}
+	
+	
+}
+
